@@ -42,8 +42,20 @@ public class ArrayMethodTestingTest {
         char[] result = ArrayMethodTesting.getInstance().sortAlphabetically(testArray);
         Assert.assertEquals(expectedArray, result);
 
-
     }
+
+//    @Test
+//    public void check_if_returns_sum(){
+//        double test = 3.3;
+//    double result = ArrayMethodTesting.getInstance().returnSum(test);
+//
+//    }
+
+
+
+
+
+
 
     @After
     public void tearDown() throws Exception {

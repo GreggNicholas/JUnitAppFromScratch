@@ -2,6 +2,8 @@ package com.example.junittestdrivendevelopment;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ArrayMethodTesting {
 
@@ -43,7 +45,6 @@ public class ArrayMethodTesting {
 //        }
 //                }
 
-
     public char[] sortAlphabetically(char[] input) {
         Arrays.sort(input);
         return input;
@@ -59,10 +60,16 @@ public class ArrayMethodTesting {
     }
 
 
-//    public String[] removeCaseSensitiveDuplicates(String[] input) {
-//
-//
-//    }
-//
+    public Set<String> removeCaseSensitiveDuplicates(String[] input) {
+        if (input == null) {
+            return null;
+        }
+        final Set<String> uniqueValue = new HashSet<>();
+        for (String value : input) {
+            if (!uniqueValue.add(value.trim().toLowerCase())) ;
+        }
+        return uniqueValue;
+    }
+
 }
 
