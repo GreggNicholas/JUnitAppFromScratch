@@ -1,8 +1,9 @@
 package com.example.junittestdrivendevelopment;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class ArrayMethodTesting {
@@ -71,5 +72,23 @@ public class ArrayMethodTesting {
         return uniqueValue;
     }
 
-}
 
+    public Map<String, Integer> mapDuplicates(String[] input) {
+
+        if (input == null) {
+            return null;
+        }
+        Map<String, Integer> mapValues = new HashMap<>();
+        for (String mapKey : input) {
+            if (mapValues.containsKey(mapKey)) {
+int count = mapValues.get(mapKey);
+        mapValues.put(mapKey, count + 1);
+            } else{
+                mapValues.put(mapKey,1);
+            }
+        }
+return mapValues;
+    }
+
+
+}
